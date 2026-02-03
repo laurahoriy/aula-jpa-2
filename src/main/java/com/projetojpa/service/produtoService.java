@@ -1,12 +1,14 @@
-package service;
+package com.projetojpa.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import entity.produto;
-import repository.produtoRepository;
+import com.projetojpa.entity.produto;
+import com.projetojpa.repository.produtoRepository;
+
+
 
 @Service
 public class produtoService {

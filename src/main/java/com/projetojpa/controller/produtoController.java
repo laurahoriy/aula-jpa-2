@@ -1,4 +1,4 @@
-package controller;
+package com.projetojpa.controller;
 
 import java.util.List;
 
@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import entity.produto;
-import service.produtoService;
+import com.projetojpa.entity.produto;
+import com.projetojpa.service.produtoService;
+
+
 
 @RestController
 @RequestMapping("/products")
@@ -27,7 +29,7 @@ public class produtoController {
 
 	@PostMapping
 	public produto createProduct(@RequestBody produto produto) {
-		return produtoService.getProdutoById(null);
+		return produtoService.saveProduto(produto);
 	}
 
 	@GetMapping("/{id}")
